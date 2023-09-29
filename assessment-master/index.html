@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>myhELO Coding Assessment</title>
+    <!--
+    Author: Manav Shah
+    Description: Mario-Kart themed visualization of FDA API Data Pull
+    Date: 09/28/2023
+    -->
+    <link rel="stylesheet" type="text/css" href="css/assessment.css" />
+    <link rel="stylesheet" type="text/css" href="css/table.css" />
+    <link rel="stylesheet" type="text/css" href="css/start.css" />
+    <link rel="stylesheet" type="text/css" href="css/mario-kart.css" />
+  </head>
+  <body>
+    <!-- Start Game Page -->
+    <div id="start-game-page">
+      <div id="start-game-container">
+        <h1>Welcome to Mario Kart</h1>
+        <h3>( FDA Data Visualization )</h3>
+        <button id="visualize-button">Visualize</button>
+      </div>
+    </div>
+
+    <!-- Mario Kart Track Page -->
+    <div id="mario-kart-page" style="display: none">
+      <div class="bullet-bill"></div>
+      <button id="start-game-button">Start Race</button>
+      <button id="see-table-button">See Table</button>
+      <div class="race-track">
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+        <div class="lane"></div>
+      </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page" style="display: none">
+      <div class="results-table">
+        <button id="x">X</button>
+        <h2>Results</h2>
+        <table>
+          <!-- Table rows for results -->
+        </table>
+      </div>
+    </div>
+
+    <!-- Include your JavaScript files as before -->
+    <script type="text/javascript" src="js/assessment.js"></script>
+    <script type="text/javascript" src="js/component.js"></script>
+    <script type="text/javascript" src="js/component/visualization.js"></script>
+    <script type="text/javascript" src="js/component/table.js" defer></script>
+    <script type="text/javascript" src="js/characters.js"></script>
+    <script type="text/javascript" src="js/component/track.js"></script>
+    <script>
+      // JavaScript code for managing page transitions
+      document.addEventListener("DOMContentLoaded", () => {
+        const startGameButton = document.getElementById("start-game-button");
+        const visualizeButton = document.getElementById("visualize-button");
+        const showTableButton = document.getElementById("see-table-button");
+        const startGamePage = document.getElementById("start-game-page");
+        const marioKartPage = document.getElementById("mario-kart-page");
+        const resultsPage = document.getElementById("results-page");
+
+        // Event listener to start the game
+        visualizeButton.addEventListener("click", () => {
+          // Hide the start game page
+          startGamePage.style.display = "none";
+
+          // Display the Mario Kart track page
+          marioKartPage.style.display = "block";
+          function clickHandler() {
+            // Start the race logic here
+            startRace();
+
+            // Remove the event listener after being clicked
+            startGameButton.style.backgroundColor = "#D1D5D6";
+            startGameButton.disabled = true;
+            startGameButton.removeEventListener("click", clickHandler);
+          }
+
+          function showTableHandler() {
+            // Hide the Mario Kart track page
+            marioKartPage.style.display = "none";
+
+            // Display the results page
+            resultsPage.style.display = "block";
+
+            // Load and display the results table
+            loadResultsTable();
+          }
+
+          // Add the click event listener to the startGameButton
+          startGameButton.addEventListener("click", clickHandler);
+
+          // Add the click event listener to the show-table-button
+          showTableButton.addEventListener("click", showTableHandler);
+        });
+        function closeTable() {
+          // Hide the Mario Kart track page
+          marioKartPage.style.display = "block";
+
+          // Display the results page
+          resultsPage.style.display = "none";
+        }
+        // Add the click event listener to the show-table-button
+        x.addEventListener("click", closeTable);
+      });
+
+      function loadResultsTable() {
+        // Implement code to load and display the results table here
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+/*
+          ____
+        o8%8888,
+      o88%8888888.
+     8'-    -:8888b
+    8'         8888
+   d8.-=. ,==-.:888b
+   >8 `~` :`~' d8888
+   88         ,88888
+   88b. `-~  ':88888
+   888b ~==~ .:88888
+   88888o--:':::8888
+   `88888| :::' 8888b
+   8888^^'       8888b
+  d888           ,%888b.
+ d88%            %%%8--'-.
+/88:.__ ,        _%-' ---  -
+    '''::===..-'   =  --.
+
+*/
+body {
+  text-align: center;
+  background-color: #66bb6a; /* Green background for the race track */
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2196F3; /* Blue button color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

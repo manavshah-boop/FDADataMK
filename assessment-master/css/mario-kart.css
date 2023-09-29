@@ -1,0 +1,140 @@
+/* mario-kart.css
+Author: Manav Shah
+Description: Styling for the race-track page
+Date: 09/28/2023
+*/
+
+@font-face {
+  font-family: "MarioKartFont"; /* Font Theme */
+  src: url("mario_kart_f2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  text-align: center;
+  background-image: url("../characters/background.jpeg"); /* Background */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "MarioKartFont";
+}
+
+/* Race-track Styling */
+.race-track {
+  position: relative;
+  width: 80%; /* Set the width to 80% of the screen */
+  height: 80vh; /* Set the height to 80% of the viewport height */
+  margin: 10vh auto; /* Center horizontally and provide vertical spacing */
+  border: 5px solid #fff; /* White border for the track */
+  bottom: 5vh;
+}
+
+/* Lane Styling */
+.lane {
+  width: 6.6666666667%;
+  height: 100%;
+  position: absolute;
+  border: 3px dashed white; /* Change border style to dashed */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Individual Lane Styling */
+.lane:nth-child(1) {
+  left: 0;
+  background-color: #000;
+}
+
+.lane:nth-child(2) {
+  left: 6.6666666667%;
+  background-color: #000;
+}
+
+.lane:nth-child(3) {
+  left: 13.3333333333%;
+  background-color: #000;
+}
+
+.lane:nth-child(4) {
+  left: 20%;
+  background-color: #000;
+}
+
+.lane:nth-child(5) {
+  left: 26.6666666667%;
+  background-color: #000;
+}
+
+.lane:nth-child(6) {
+  left: 33.3333333333%;
+  background-color: #000;
+}
+
+.lane:nth-child(7) {
+  left: 40%;
+  background-color: #000; 
+}
+
+.lane:nth-child(8) {
+  left: 46.6666666667%;
+  background-color: #000;
+}
+
+.lane:nth-child(9) {
+  left: 53.3333333333%;
+  background-color: #000;
+}
+
+.lane:nth-child(10) {
+  left: 60%;
+  background-color: #000;
+}
+
+.lane:nth-child(11) {
+  left: 66.6666666667%;
+  background-color: #000;
+}
+
+.lane:nth-child(12) {
+  left: 73.3333333333%;
+  background-color: #000;
+}
+
+.lane:nth-child(13) {
+  left: 80%;
+  background-color: #000;
+}
+
+.lane:nth-child(14) {
+  left: 86.6666666667%;
+  background-color: #000;
+}
+
+.lane:nth-child(15) {
+  left: 93.3333333333%;
+  background-color: #000; 
+}
+
+/* Styling for character images */
+.character-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 50%; /* Makes the images circular */
+  object-fit: cover; /* Maintains aspect ratio and fills the container */
+}
+
+/* Styling for the text */
+.outliers-text {
+  position: absolute;
+  font-family: "MarioKartFont", sans-serif; /* Use a Mario-themed font */
+  font-size: 16px;
+  color: #3498db; /* Mario Kart's orange color */
+  text-shadow: 1px 1px 2px #000; /* Add a shadow effect */
+  left: 0;
+  top: -30px; /* Adjust the position as needed */
+  white-space: nowrap; /* Ensure the text stays on one line */
+}

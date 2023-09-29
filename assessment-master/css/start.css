@@ -1,0 +1,81 @@
+/* start.css
+Author: Manav Shah
+Description: Styling for the home page
+Date: 09/23/2023
+*/
+
+@font-face {
+  font-family: "MarioKartFont"; 
+  src: url("mario_kart_f2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Style the start-game-page container with a background image */
+#start-game-page {
+  text-align: center;
+  background-image: url("../characters/background.jpeg"); /* Mario-themed background image */
+  background-size: cover;
+  height: 100vh; /* Make the page full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* A container for text and buttons with a blue background */
+#start-game-container {
+  background-color: #0080ff; /* Mario blue background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  opacity: 0.9;
+}
+
+/* Style the title */
+h1, h3 {
+  font-family: "MarioKartFont", sans-serif; /* Use a Mario-themed font */
+  font-size: 24px; 
+  color: #ffd700; /* Mario gold color */
+  text-shadow: 3px 3px 5px #000;
+}
+
+/* Style the title */
+h3 {
+  margin-bottom: 10px; /* Add spacing below the title */
+}
+
+#visualize-button, #see-table-button, #start-game-button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#visualize-button {
+  background-color: #ff0000; /* Mario red color */
+  font-family: MarioKartFont;
+}
+
+#see-table-button {
+  background-color: #0080ff; /* Mario blue color */
+  font-family: MarioKartFont;
+}
+
+#start-game-button {
+  background-color: #ff0000; /* Mario red color */
+  font-family: MarioKartFont;
+}
+
+/* Position the 'x' element */
+#x {
+  position: relative;
+  left: 46vw;
+  top: 5vh;
+  font-family: MarioKartFont;
+}
+
+#visualize-button:hover, #see-table-button:hover, #start-game-button:hover {
+  background-color: #ff4500; /* Darker red color on hover */
+}

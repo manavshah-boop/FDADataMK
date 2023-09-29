@@ -1,0 +1,72 @@
+/* table.css
+Author: Manav Shah
+Description: Styling for the table
+Date: 09/28/2023
+*/
+
+@font-face {
+  font-family: "MarioKartFont";
+  src: url("mario_kart_f2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  overflow: scroll;
+}
+
+.results-table {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  overflow: scroll;
+}
+
+/* Style the table cells containing character images */
+.results-table img {
+  max-width: 100px; /* Maximum Width */
+  height: auto; /* This maintains the aspect ratio */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #f00; /* Red background for table headers */
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+th, td {
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #444; /* Dark gray background for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: #222; /* Darker gray background for odd rows */
+}
+
+/* Style the first row (winner) differently */
+tr:first-child {
+  background-color: #fbd000; /* Red background for the winner's row */
+  font-weight: bold;
+}
+
